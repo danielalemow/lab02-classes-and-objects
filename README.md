@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Week 2 - Classes and Objects
 
 This file contains a summary of the information in lab02.html.  That file contains the lab 
@@ -37,3 +38,6 @@ push again -- you should be successful this time.
 
 If you get stuck, talk to one of the teaching team and they'll help you with
 this.
+=======
+# lab02-classes-and-objects
+>>>>>>> 708879aa0b98e4a2c560bbbfd0a9460f486b52be

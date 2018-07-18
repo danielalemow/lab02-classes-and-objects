@@ -18,6 +18,6 @@ u = Fraction(num: 2, dem: 3)
 print("u = \(u.num)/\(u.dem)")
 
 // Define and create a new instance of a Fraction object
-var x: Fraction = Fraction(num: -5, dem: 1)
+var x: Fraction = Fraction(num: -5)
 
 print("x = \(x.num)/\(x.dem)")

@@ -8,5 +8,12 @@
 
 import Foundation
 
-print("Hello, World!")
+// Define a new fraction object
+var u: Fraction
+
+// Create and initialise a new object instance
+u = Fraction.init()
+
+// Show the state of the object's internal variables
+print("u = \(u.num)/\(u.dem)")
 

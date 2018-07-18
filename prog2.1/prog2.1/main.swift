@@ -23,3 +23,6 @@ var x: Fraction = Fraction(num: -5)
 
 print("x = \(x.description)")
 print("decimal value of x = \(x.decimal)")
+
+var test: Fraction = u.add(_f: x)
+print("value of test after addition = \(test.description)")

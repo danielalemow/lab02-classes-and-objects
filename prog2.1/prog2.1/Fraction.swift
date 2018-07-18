@@ -19,6 +19,28 @@ class Fraction {
     var num: Int // Numerator
     var dem: Int // Denominator
     
+    // COMPUTED PROPERTIES
+    
+    /**
+     * Converts fraction to a float value.
+     * - returns: Float Decimal value of the fraction
+     */
+    var decimal: Float {
+        get {
+            // num and dem are of type Int, therefore,
+            // they need to be explicitly converted to Floats
+            return Float(self.num)/Float(self.dem)
+        }
+    }
+    
+    /**
+     * Converts object to a string description.
+     * - returns: String String representation of a fraction
+     */
+    var description: String {
+        return "\(self.num)/\(self.dem)"
+    }
+    
     // INITIALISERS
     
     /**

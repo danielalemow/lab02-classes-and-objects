@@ -80,4 +80,17 @@ class Fraction {
     convenience init(num : Int) {
         self.init(num: num, dem: 1)
     }
+    
+    // METHODS
+    
+    /**
+     * Adds a fraction to self.
+     * - parameter f: Fraction to add to self.
+     * - returns: Fraction The result of adding f to self.
+     */
+    func add(_f: Fraction) -> Fraction {
+        return Fraction(num: (self.num * _f.dem) + (self.dem * _f.num),
+                        dem: self.dem * _f.dem)
+    }
+
 }

@@ -49,4 +49,13 @@ class Fraction {
         self.num = num
         self.dem = dem
     }
+    
+    /**
+     * Convenience initialiser
+     * Numerator is set to some value, denominator is set to 1.
+     * - parameter num: Fraction's numerator
+     */
+    convenience init(num : Int) {
+        self.init(num: num, dem: 1)
+    }
 }

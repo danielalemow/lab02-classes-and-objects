@@ -12,21 +12,12 @@ import Foundation
 var u: Fraction
 
 // Create and initialise a new object instance
-u = Fraction.init()
-
-// Show the state of the object's internal variables
-print("u = \(u.num)/\(u.dem)")
-
-// Change the values of object's internal variables
-u.num = 2
-u.dem = 3
+u = Fraction(num: 2, dem: 3)
 
 // Show the state of the object's internal variables
 print("u = \(u.num)/\(u.dem)")
 
 // Define and create a new instance of a Fraction object
-var x: Fraction = Fraction()
-x.num = -5
-x.dem = 1
+var x: Fraction = Fraction(num: -5, dem: 1)
 
 print("x = \(x.num)/\(x.dem)")

@@ -33,4 +33,20 @@ class Fraction {
         self.num = 0
         self.dem = 1
     }
+    
+    /**
+     * Designated initialiser
+     * Numerator and denominator values are passed in the arguments of the initialiser.
+     * - parameter num: Fraction's numerator
+     * - parameter den: Fraction's denominator
+     */
+    
+    init(num: Int, dem: Int) {
+        
+        // Check the denominator
+        assert(dem != 0, "Denominator cannot be zero")
+        
+        self.num = num
+        self.dem = dem
+    }
 }

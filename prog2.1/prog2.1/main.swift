@@ -15,9 +15,11 @@ var u: Fraction
 u = Fraction(num: 2, dem: 3)
 
 // Show the state of the object's internal variables
-print("u = \(u.num)/\(u.dem)")
+print("u = \(u.description)")
+print("decimal value of u = \(u.decimal)")
 
 // Define and create a new instance of a Fraction object
 var x: Fraction = Fraction(num: -5)
 
-print("x = \(x.num)/\(x.dem)")
+print("x = \(x.description)")
+print("decimal value of x = \(x.decimal)")

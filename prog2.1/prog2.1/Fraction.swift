@@ -92,5 +92,14 @@ class Fraction {
         return Fraction(num: (self.num * _f.dem) + (self.dem * _f.num),
                         dem: self.dem * _f.dem)
     }
-
+    
+    /**
+     * Subtracts fraction from self.
+     * - parameter f: Fraction to subtract from self.
+     * - returns: Fraction The result of subtracting f from self.
+     */
+    func subtract(_f: Fraction) -> Fraction {
+        return Fraction(num: (self.num * _f.dem) - (self.dem * _f.num),
+                        dem: self.dem * _f.dem)
+    }
 }

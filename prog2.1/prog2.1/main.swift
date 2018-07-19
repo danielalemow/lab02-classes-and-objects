@@ -8,21 +8,22 @@
 
 import Foundation
 
-// Define a new fraction object
-var u: Fraction
+var u = Fraction(num: 2, dem: 3)
+var v = Fraction(num: -7, dem: 9)
 
-// Create and initialise a new object instance
-u = Fraction(num: 2, dem: 3)
+print("v=\(v.description)")
+print("decimal value of v=\(v.decimal)")
 
-// Show the state of the object's internal variables
-print("u = \(u.description)")
-print("decimal value of u = \(u.decimal)")
+var f: Fraction
 
-// Define and create a new instance of a Fraction object
-var x: Fraction = Fraction(num: -5)
+f = u.add(v)
+print("(" + u.description + ")+(" + v.description + ") = " + f.description)
 
-print("x = \(x.description)")
-print("decimal value of x = \(x.decimal)")
+f = u.subtract(v)
+print("(" + u.description + ")-(" + v.description + ") = " + f.description)
 
-var test: Fraction = u.add(_f: x)
-print("value of test after addition = \(test.description)")
+f = u.multiply(v)
+print("(" + u.description + ")*(" + v.description + ") = " + f.description)
+
+f = u.divide(v)
+print("(" + u.description + ")/(" + v.description + ") = " + f.description)

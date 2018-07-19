@@ -120,4 +120,32 @@ class Fraction {
     func divide(_ f: Fraction) -> Fraction {
         return Fraction(num: self.num * f.dem, dem: self.dem * f.num)
     }
+    
+    /**
+     + operator between two Fractions
+    */
+    static func +(f1: Fraction, f2: Fraction) -> Fraction {
+        return f1.add(f2)
+    }
+    
+    /**
+     - operator between two Fractions
+     */
+    static func -(f1: Fraction, f2: Fraction) -> Fraction {
+        return f1.subtract(f2)
+    }
+    
+    /**
+     * operator between two Fractions
+     */
+    static func *(f1: Fraction, f2: Fraction) -> Fraction {
+        return f1.multiply(f2)
+    }
+    
+    /**
+     / operator between two Fractions
+     */
+    static func /(f1: Fraction, f2: Fraction) -> Fraction {
+        return f1.divide(f2)
+    }
 }

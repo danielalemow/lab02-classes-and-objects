@@ -17,7 +17,7 @@ class Fraction {
     // STORED PROPERTIES
     
     private let num: Int // Numerator
-    private let dem: Int // Denominator
+    private let den: Int // Denominator
     
     // COMPUTED PROPERTIES
     
@@ -27,9 +27,9 @@ class Fraction {
      */
     var decimal: Float {
         get {
-            // num and dem are of type Int, therefore,
+            // num and den are of type Int, therefore,
             // they need to be explicitly converted to Floats
-            return Float(self.num)/Float(self.dem)
+            return Float(self.num)/Float(self.den)
         }
     }
     
@@ -38,7 +38,7 @@ class Fraction {
      * - returns: String String representation of a fraction
      */
     var description: String {
-        return "\(self.num)/\(self.dem)"
+        return "\(self.num)/\(self.den)"
     }
     
     // INITIALISERS
@@ -53,7 +53,7 @@ class Fraction {
         // denominator to 1 is equivalent
         // to setting the fraction to zero
         self.num = 0
-        self.dem = 1
+        self.den = 1
     }
     
     /**
@@ -63,26 +63,26 @@ class Fraction {
      * - parameter den: Fraction's denominator
      */
     
-    init(num: Int, dem: Int) {
+    init(num: Int, den: Int) {
         
         var num = num;
-        var dem = dem;
+        var den = den;
         
-        if (dem < 0) {
+        if (den < 0) {
             num = -num
-            dem = -dem
+            den = -den
         }
         
-        for gcd in (1...dem).reversed() {
-            if (num % gcd == 0 && dem % gcd == 0) {
+        for gcd in (1...den).reversed() {
+            if (num % gcd == 0 && den % gcd == 0) {
                 num /= gcd
-                dem /= gcd
+                den /= gcd
                 break
             }
         }
         
         self.num = num
-        self.dem = dem
+        self.den = den
     }
     
     /**
@@ -91,7 +91,7 @@ class Fraction {
      * - parameter num: Fraction's numerator
      */
     convenience init(num : Int) {
-        self.init(num: num, dem: 1)
+        self.init(num: num, den: 1)
     }
     
     // METHODS
@@ -102,8 +102,8 @@ class Fraction {
      * - returns: Fraction The result of adding f to self.
      */
     func add(_ f: Fraction) -> Fraction {
-        return Fraction(num: (self.num * f.dem) + (self.dem * f.num),
-                        dem: self.dem * f.dem)
+        return Fraction(num: (self.num * f.den) + (self.den * f.num),
+                        den: self.den * f.den)
     }
     
     /**
@@ -112,8 +112,8 @@ class Fraction {
      * - returns: Fraction The result of subtracting f from self.
      */
     func subtract(_ f: Fraction) -> Fraction {
-        return Fraction(num: (self.num * f.dem) - (self.dem * f.num),
-                        dem: self.dem * f.dem)
+        return Fraction(num: (self.num * f.den) - (self.den * f.num),
+                        den: self.den * f.den)
     }
     
     /**
@@ -122,7 +122,7 @@ class Fraction {
      * - returns: Fraction The result of multiplying self by f.
      */
     func multiply(_ f: Fraction) -> Fraction {
-        return Fraction(num: self.num * f.num, dem: self.dem * f.dem)
+        return Fraction(num: self.num * f.num, den: self.den * f.den)
     }
     
     /**
@@ -131,7 +131,7 @@ class Fraction {
      * - returns: Fraction The result of dividing self by f.
      */
     func divide(_ f: Fraction) -> Fraction {
-        return Fraction(num: self.num * f.dem, dem: self.dem * f.num)
+        return Fraction(num: self.num * f.den, den: self.den * f.num)
     }
     
     /**

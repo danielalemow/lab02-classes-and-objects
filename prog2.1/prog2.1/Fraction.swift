@@ -88,9 +88,9 @@ class Fraction {
      * - parameter f: Fraction to add to self.
      * - returns: Fraction The result of adding f to self.
      */
-    func add(_f: Fraction) -> Fraction {
-        return Fraction(num: (self.num * _f.dem) + (self.dem * _f.num),
-                        dem: self.dem * _f.dem)
+    func add(_ f: Fraction) -> Fraction {
+        return Fraction(num: (self.num * f.dem) + (self.dem * f.num),
+                        dem: self.dem * f.dem)
     }
     
     /**
@@ -98,9 +98,9 @@ class Fraction {
      * - parameter f: Fraction to subtract from self.
      * - returns: Fraction The result of subtracting f from self.
      */
-    func subtract(_f: Fraction) -> Fraction {
-        return Fraction(num: (self.num * _f.dem) - (self.dem * _f.num),
-                        dem: self.dem * _f.dem)
+    func subtract(_ f: Fraction) -> Fraction {
+        return Fraction(num: (self.num * f.dem) - (self.dem * f.num),
+                        dem: self.dem * f.dem)
     }
     
     /**
@@ -108,8 +108,8 @@ class Fraction {
      * - parameter f: Fraction to multiply self by.
      * - returns: Fraction The result of multiplying self by f.
      */
-    func multiply(_f: Fraction) -> Fraction {
-        return Fraction(num: self.num * _f.num, dem: self.dem * _f.dem)
+    func multiply(_ f: Fraction) -> Fraction {
+        return Fraction(num: self.num * f.num, dem: self.dem * f.dem)
     }
     
     /**
@@ -117,7 +117,7 @@ class Fraction {
      * - parameter f: Fraction to divide self by.
      * - returns: Fraction The result of dividing self by f.
      */
-    func divide(_f: Fraction) -> Fraction {
-        return Fraction(num: self.num * _f.dem, dem: self.dem * _f.num)
+    func divide(_ f: Fraction) -> Fraction {
+        return Fraction(num: self.num * f.dem, dem: self.dem * f.num)
     }
 }

@@ -16,8 +16,8 @@ class Fraction {
     
     // STORED PROPERTIES
     
-    private var num: Int // Numerator
-    private var dem: Int // Denominator
+    private let num: Int // Numerator
+    private let dem: Int // Denominator
     
     // COMPUTED PROPERTIES
     
@@ -65,13 +65,24 @@ class Fraction {
     
     init(num: Int, dem: Int) {
         
-        // Check the denominator
-        assert(dem != 0, "Denominator cannot be zero")
+        var num = num;
+        var dem = dem;
+        
+        if (dem < 0) {
+            num = -num
+            dem = -dem
+        }
+        
+        for gcd in (1...dem).reversed() {
+            if (num % gcd == 0 && dem % gcd == 0) {
+                num /= gcd
+                dem /= gcd
+                break
+            }
+        }
         
         self.num = num
         self.dem = dem
-        
-        self.reduce()
     }
     
     /**
@@ -151,21 +162,4 @@ class Fraction {
         return f1.divide(f2)
     }
     
-    /**
-     * Reduce self by greatest common denominator found.
-     */
-    private func reduce() {
-        if (self.dem < 0) {
-            self.num = -self.num
-            self.dem = -self.dem
-        }
-        
-        for gcd in (1...self.dem).reversed() {
-            if (self.num % gcd == 0 && self.dem % gcd == 0) {
-                self.num /= gcd
-                self.dem /= gcd
-                break
-            }
-        }
-    }
 }

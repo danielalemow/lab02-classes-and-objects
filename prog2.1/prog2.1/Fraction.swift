@@ -102,4 +102,14 @@ class Fraction {
         return Fraction(num: (self.num * _f.dem) - (self.dem * _f.num),
                         dem: self.dem * _f.dem)
     }
+    
+    /**
+     * Multiplies self by a fraction.
+     * - parameter f: Fraction to multiply self by.
+     * - returns: Fraction The result of multiplying self by f.
+     */
+    func multiply(_f: Fraction) -> Fraction {
+        return Fraction(num: self.num * _f.num, dem: self.dem * _f.dem)
+    }
+    
 }

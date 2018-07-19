@@ -112,4 +112,12 @@ class Fraction {
         return Fraction(num: self.num * _f.num, dem: self.dem * _f.dem)
     }
     
+    /**
+     * Divides self by a fraction.
+     * - parameter f: Fraction to divide self by.
+     * - returns: Fraction The result of dividing self by f.
+     */
+    func divide(_f: Fraction) -> Fraction {
+        return Fraction(num: self.num * _f.dem, dem: self.dem * _f.num)
+    }
 }

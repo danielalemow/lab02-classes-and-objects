@@ -16,14 +16,14 @@ print("decimal value of v=\(v.decimal)")
 
 var f: Fraction
 
-f = u.add(v)
+f = u + v
 print("(" + u.description + ")+(" + v.description + ") = " + f.description)
 
-f = u.subtract(v)
+f = u - v
 print("(" + u.description + ")-(" + v.description + ") = " + f.description)
 
-f = u.multiply(v)
+f = u * v
 print("(" + u.description + ")*(" + v.description + ") = " + f.description)
 
-f = u.divide(v)
+f = u / v
 print("(" + u.description + ")/(" + v.description + ") = " + f.description)
